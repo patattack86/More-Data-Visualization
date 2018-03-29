@@ -1,5 +1,5 @@
 # More-Data-Visualization
-#Need to turn this into a function, results in nice 3x3 subplot of correlation plots, good format for publication
+#Need to turn this into a function, results in nice 3x3 subplot of correlation plots, good format for publication, using this for my thesis at the moment
 
 
 ```{r setup, include=FALSE}
