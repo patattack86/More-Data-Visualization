@@ -8,6 +8,7 @@ setwd("E:/Thesis/Thesis-Excel-files/8-23/HSI3-Spec-comparison")
 wvdata23 <- read.csv("Spec.HSI3.aug23.csv")
 
 #loading necessary libraries
+
 library(ggplot2)
 library(gtable)
 library(grid)
@@ -15,6 +16,7 @@ library(gridExtra)
 
 
 #setting data 
+
 x = wvdata23$Spec.857.
 y = wvdata23$HSI3.857.5
 
@@ -23,6 +25,7 @@ fit23 <- lm(x~y)
 summary(fit23)
 
 #creating the first plotting instance
+
 p1.439 <- ggplot(wvdata23, aes(x=Spec.438.8, y=HSI3.438.8)) + 
   geom_point(shape=1, size = 3) +
   theme_classic() +
@@ -42,6 +45,7 @@ p1.439 <- ggplot(wvdata23, aes(x=Spec.438.8, y=HSI3.438.8)) +
 
 
 #after the plot is complete, apply the code on 8 other columns, wrap nicely using the grid.arrange function. 
+
 aug23grid <- grid.arrange(p1.439,p2.489,p3.529,p4.579, p5.658,p6.738,p7.787,p8.857, ncol=3, 
                           top = textGrob("Correlation between HSI3 and Spectroradiometer reflectance, 23 August 2017
                                          
